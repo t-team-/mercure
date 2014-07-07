@@ -3,6 +3,7 @@ return array(
     // This should be an array of module namespaces used in the application.
     'modules' => array(
         'Application',
+        'Mercure',
     ),
 
     // These are various options for the listeners attached to the ModuleManager
@@ -27,7 +28,7 @@ return array(
         // If enabled, the merged configuration will be cached and used in
         // subsequent requests.
         //'config_cache_enabled' => $booleanValue,
-
+        'config_cache_enabled' => false,
         // The key used to create the configuration cache file name.
         //'config_cache_key' => $stringKey,
 
@@ -41,7 +42,7 @@ return array(
 
         // The path in which to cache merged configuration.
         //'cache_dir' => $stringPath,
-
+        'cache_dir' => 'data/cache',
         // Whether or not to enable modules dependency checking.
         // Enabled by default, prevents usage of modules that depend on other modules
         // that weren't loaded.
@@ -61,4 +62,10 @@ return array(
    // Initial configuration with which to seed the ServiceManager.
    // Should be compatible with Zend\ServiceManager\Config.
    // 'service_manager' => array(),
+    'service_manager' => array(
+        'use_default' => true,
+        'factories' => array(
+            
+        ),
+    ),
 );
