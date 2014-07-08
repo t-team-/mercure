@@ -8051,3 +8051,7 @@ th.hide-for-touch {
     display: table-cell !important;
   }
 }
+/* line 4, ../assets/scss/app.scss */
+a {
+  font-weight: normal;
+}
